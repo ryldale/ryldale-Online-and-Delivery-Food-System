@@ -93,7 +93,7 @@ class Profile extends CI_Controller {
 
                     $this->User_model->update($id,$formArray);
                     $this->session->set_flashdata('pwd_success', 'Password updated successfully');
-                    redirect(base_url(). 'profile/index');
+                    redirect(base_url(). 'login/logout');
                 }
             }else {
                 $this->session->set_flashdata('pwd_error', 'Your old password is incorrect');
