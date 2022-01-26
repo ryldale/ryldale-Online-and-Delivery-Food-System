@@ -34,9 +34,7 @@
                         <td><?php echo '$'.$order['price']; ?></td>
                         <?php if($status=="" or $status=="NULL") { ?>
                         <td> <button type="button" class="btn btn-secondary" style="font-weight:bold;"><i class="fas fa-bars"></i> Dispatch</button></td>
-                        <?php } if($status=="in process") { ?>
-                        <td> <button type="button" class="btn btn-warning"><span class="fa fa-cog fa-spin" aria-hidden="true"></span> On Your Way!</button></td>
-                        <?php }?>
+
                         <?php if($status=="rejected") { ?>
                         <td> <button type="button" class="btn btn-danger"> <i class="far fa-times-circle"></i> Cancelled</button>
                         </td>
@@ -45,6 +43,11 @@
                         <td>
                             <a href="javascript:void(0);" onclick="deleteOrder(<?php echo $order['o_id']; ?>)" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Cancel</a>
                         </td>
+                        <?php } if($status=="in process") { ?>
+                        <td> <button type="button" class="btn btn-warning"><span class="fa fa-cog fa-spin" aria-hidden="true"></span> On Your Way!</button></td>
+                        <td><?php echo $order['date']; ?></td>
+                        <td></td>
+                        <?php }?>
                     </tr>
                     <?php } ?>
                     <?php } ?>

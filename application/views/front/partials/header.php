@@ -20,7 +20,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="<?php echo base_url().'home/index';?>"><i class="fas fa-utensil-spoon"></i> La Lamoon</a>
+            <a class="navbar-brand" href="<?php echo base_url().'home/index';?>"><i class="fas fa-utensil-spoon"></i> Lala Mon</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarRes">
                 <span class="navbar-toggler-icon"></span>
             </button>
