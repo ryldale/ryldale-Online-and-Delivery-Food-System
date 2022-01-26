@@ -10,7 +10,9 @@ class Singup extends CI_Controller {
 
 
     public function index() {
-        $this->load->view('front/singup');
+		$this->load->view('front/partials/header');
+		$this->load->view('front/signup');
+		$this->load->view('front/partials/footer');
     }
 
     public function create_user() {

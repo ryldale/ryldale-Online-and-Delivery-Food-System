@@ -45,20 +45,6 @@
                             <a class="dropdown-item"
                                 href="<?php echo base_url().'admin/store/create_restaurant';?>">Create Store</a>
                         </div>
-                    </li>
-                    <li class="nav-item dropdown active">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Category
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="<?php echo base_url().'admin/category/';?>">Manage
-                                Categories</a>
-                            <a class="dropdown-item"
-                                href="<?php echo base_url().'admin/category/create_category';?>">Create
-                                Category</a>
-                        </div>
-                    </li>
                     <li class="nav-item dropdown active">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

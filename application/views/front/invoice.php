@@ -16,7 +16,7 @@
     <div class="container my-3" style="border: 2px outset green;">
         <header class="mt-1 text-right">
         </header>
-        <div class="invoice mb-3">
+        <div class="invoice mb-3">  
             <div class="row mb-3 p-3">
                 <div class="col-6">
                     <h3 style="color:purple"><b>Food Ordering System</b></h3>

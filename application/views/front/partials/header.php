@@ -20,7 +20,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="<?php echo base_url().'home/index';?>"><i class="fas fa-utensil-spoon"></i> Food Ordering System</a>
+            <a class="navbar-brand" href="<?php echo base_url().'home/index';?>"><i class="fas fa-utensil-spoon"></i> Lala Mon</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarRes">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -28,7 +28,7 @@
             <div class="collapse navbar-collapse" id="navbarRes">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="<?php echo base_url().'home/index';?>">Home</a>
+                        <a class="nav-link" href="<?php echo base_url().'about/index';?>">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="<?php echo base_url().'restaurant/index';?>">Restaurants</a>
@@ -52,13 +52,15 @@
                             <a class="dropdown-item" href="<?php echo base_url().'profile';?>"><i
                                     class="fas fa-user-circle"></i> My Profile</a>
                             <hr>
+                            <a class="dropdown-item" href="<?php echo base_url().'cart';?>"><i class="fas fa-cart-arrow-down"></i> My Cart</a>
+                            <hr>
                             <a class="dropdown-item" href="<?php echo base_url().'orders/';?>"><i class="fas fa-shopping-bag"></i> Orders</a>
                             <hr>
                             <a class="dropdown-item" href="<?php echo base_url().'login/logout';?>"><i class="fas fa-power-off"></i> Logout</a>
                         </div>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="<?php echo base_url().'cart';?>"><i class="fas fa-cart-arrow-down"></i> My Cart</a>
+                        
                     </li>
                     <?php } ?>
                 </ul>
