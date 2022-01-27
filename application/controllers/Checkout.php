@@ -31,19 +31,24 @@ class Checkout extends CI_Controller {
             $submit = $this->input->post('placeholder');
             $this->form_validation->set_error_delimiters('<p class="invalid-feedback">','</p>');
             $this->form_validation->set_rules('address', 'Address','trim|required');
+            $this->form_validation->set_rules('password','Password', 'trim|required');
 
-            if($this->form_validation->run() == true) { 
+            if($this->form_validation->run() == true) {
+                $password = $this->input->post('password');
                 $formArray['address'] = $this->input->post('address');
-                
-                //insert data into customer table and get last inserted custid
-                $this->User_model->update($u_id,$formArray);
-                $order = $this->placeOrder($u_id);
-                if($order) {
-                    $this->session->set_flashdata('success_msg', 'Thank You! Your order has been placed successfully!');
-                       redirect(base_url().'orders');
-                } else {
-                     $data['error_msg'] = "Order submission failed, please try again.";
+
+                if( password_verify($password, $user['password']) == true) {
+                    //insert data into customer table and get last inserted custid
+                    $this->User_model->update($u_id,$formArray);
+                    $order = $this->placeOrder($u_id);
+                    if($order) {
+                        $this->session->set_flashdata('success_msg', 'Thank You! Your order has been placed successfully!');
+                            redirect(base_url().'orders');
+                    } else {
+                            $data['error_msg'] = "Order submission failed, please try again.";
+                    }
                 }
+                
             }
 
         $data['user'] = $user;

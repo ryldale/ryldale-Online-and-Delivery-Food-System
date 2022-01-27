@@ -1,13 +1,13 @@
 <div class="container mt-3">
     <div class="container shadow-container mt-3">
-        <?php if($this->session->flashdata('cat_success') != ""):?>
+        <?php if($this->session->set_flashdata('cat_success') != ""):?>
         <div class="alert alert-success">
-            <?php echo $this->session->flashdata('cat_success');?>
+            <?php echo $this->session->set_flashdata('cat_success');?>
         </div>
         <?php endif ?>
-        <?php if($this->session->flashdata('error') != ""):?>
+        <?php if($this->session->set_flashdata('error') != ""):?>
         <div class="alert alert-danger">
-            <?php echo $this->session->flashdata('error');?>
+            <?php echo $this->session->set_flashdata('error');?>
         </div>
         <?php endif ?>
         <div class="container">
