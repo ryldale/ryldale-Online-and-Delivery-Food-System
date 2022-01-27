@@ -49,6 +49,7 @@
             </div>
         </div>
         <div class="col-md-4">
+            <!-- checkout/index login/verifyPassword -->
             <form action="<?php echo base_url().'checkout/index';?>" method="POST"
                 class="form-container  shadow-container" style="width:80%">
                 <h3 class="mt-3">Shipping Details</h3><hr>
@@ -66,8 +67,34 @@
                 <div>
                     <a href="<?php echo base_url().'cart'; ?>" class="btn btn-warning"><i class="fas fa-angle-left"></i>
                         Back to cart</a>
-                    <button type="submit" name="placeOrder" class="btn btn-success">Place Order <i
-                            class="fas fa-angle-right"></i></button>
+                    <!-- <button type="submit" name="placeOrder" class="btn btn-success">Place Order <i
+                            class="fas fa-angle-right"></i></button> -->
+
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Place Order</button>
+
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Enter Password to Continue</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                    <div class="form-group">
+                                    <label for="password">Password</label> 
+                                    <input type="password" class="form-control bg-light" name="password" id="password" placeholder="Password">
+                                    </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="submit" name="placeOrder" class="btn btn-success">Place Order <i class="fas fa-angle-right"></i></button>
+                                </div>
+                                </div>
+                            </div>
+                    </div>
                 </div>
                 </from>
         </div>
