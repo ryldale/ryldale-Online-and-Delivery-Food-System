@@ -2,9 +2,9 @@
 <div class="row">
     <div class="col-md-6">
         <div class="wrapper mt-sm-5">
-            <?php if($this->session->flashdata('success') != ""):?>
+            <?php if($this->session->set_flashdata('success') != ""):?>
             <div class="alert alert-success">
-                <?php echo $this->session->flashdata('success');?>
+                <?php echo $this->session->set_flashdata('success');?>
             </div>
             <?php endif ?>
             <?php $loggedUser = $this->session->userdata('user');?>
@@ -66,14 +66,14 @@
     </div>
     <div class="col-md-6">
         <div class="wrapper mt-sm-5">
-            <?php if($this->session->flashdata('pwd_success') != ""):?>
+            <?php if($this->session->set_flashdata('pwd_success') != ""):?>
             <div class="alert alert-success">
-                <?php echo $this->session->flashdata('pwd_success');?>
+                <?php echo $this->session->set_flashdata('pwd_success');?>
             </div>
             <?php endif ?>
-            <?php if($this->session->flashdata('pwd_error') != ""):?>
+            <?php if($this->session->set_flashdata('pwd_error') != ""):?>
             <div class="alert alert-danger">
-                <?php echo $this->session->flashdata('pwd_error');?>
+                <?php echo $this->session->set_flashdata('pwd_error');?>
             </div>
             <?php endif ?>
             <?php $loggedUser = $this->session->userdata('user');?>

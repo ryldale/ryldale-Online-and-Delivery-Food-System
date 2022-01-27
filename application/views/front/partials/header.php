@@ -40,7 +40,7 @@
                         <a class="nav-link" href="<?php echo base_url().'login';?>">Login</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="<?php echo base_url().'singup/index'?>">Register</a>
+                        <a class="btn btn-primary btn-lg" href="<?php echo base_url().'singup/index'?>">Register</a>
                     </li>
                     <?php } else {?>
                     <li class="nav-item dropdown active">
