@@ -16,13 +16,13 @@
 <body>
     <div class="wrapper mt-sm-5">
         <?php
-        if (!empty($this->session->flashdata('success'))) {
-          echo "<div class='alert alert-success m-3 mx-auto'>".$this->session->flashdata('success')."</div>";
+        if (!empty($this->session->set_flashdata('success'))) {
+          echo "<div class='alert alert-success m-3 mx-auto'>".$this->session->set_flashdata('success')."</div>";
         }
         ?>
         <?php
-        if (!empty($this->session->flashdata('msg'))) {
-          echo "<div class='alert alert-danger m-3 mx-auto'>".$this->session->flashdata('msg')."</div>";
+        if (!empty($this->session->set_flashdata('msg'))) {
+          echo "<div class='alert alert-danger m-3 mx-auto'>".$this->session->set_flashdata('msg')."</div>";
         }
         ?>
         <h4 class="pb-4 border-bottom text-center">Login To Your Account</h4>
