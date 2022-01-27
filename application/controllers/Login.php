@@ -21,9 +21,12 @@ class Login extends CI_Controller {
         $this->form_validation->set_rules('username','Username', 'trim|required');
         $this->form_validation->set_rules('password','Password', 'trim|required');
 
+
+
          if($this->form_validation->run() == true) {
              $username = $this->input->post('username');
              $user = $this->User_model->getByUsername($username);
+             
              if(!empty($user)) {
                 $password = $this->input->post('password');
                 if( password_verify($password, $user['password']) == true) {
@@ -35,20 +38,25 @@ class Login extends CI_Controller {
                 } else {
                     $this->session->set_flashdata('msg', 'Either username or password is incorrect');
                     redirect(base_url().'login/index');
+                    
                 }
              } else {
                 $this->session->set_flashdata('msg', 'Either username or password is incorrect');
+                
                 redirect(base_url().'login/index');
+                
              }
              //success
          } else {
              //Error
+
             $this->load->view('front/login');
          }
     }
 
     public function logout() {
         $this->session->unset_userdata('user');
+        
         redirect(base_url().'login/index');
     }
 }
