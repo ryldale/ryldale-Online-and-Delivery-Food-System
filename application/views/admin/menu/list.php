@@ -34,7 +34,7 @@
                         <td><?php echo $dish['r_id']; ?></td>
                         <td><?php echo $dish['name']; ?></td>
                         <td><?php echo $dish['about']; ?></td>
-                        <td><?php echo "$".$dish['price']; ?></td>
+                        <td><?php echo "₱ ".$dish['price']; ?></td>
                         <td>
                             <a href="<?php echo base_url().'admin/menu/edit/'.$dish['d_id']; ?>"
                                 class="btn btn-info mb-1"><i
